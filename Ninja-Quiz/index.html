@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Ninja Quiz</title>
+</head>
+
+<body>
+  <!-- top section -->
+  <div class="intro py-3 bg-white text-center">
+    <div class="container">
+      <h2 class="text-primary display-3 my-4">Ninja Quiz</h2>
+    </div>
+  </div>
+
+  <!-- show score -->
+  <div class="result py-4 d-none bg-light text-center">
+    <div class="container lead">
+      <p>You are <span class='text-primary display-4 p-3'>0%</span> Ninja</p>
+    </div>
+  </div>
+
+  <!-- quiz section -->
+  <div class="quiz py-4 bg-info">
+    <div class="container">
+      <h2 class="my-5 text-white">On with the question...</h2>
+      <form class="quiz-form text-light">
+
+        <!--question 1 -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">1. How do you give a ninja directions?</p>
+          <!-- choice a -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q1' value='A'>
+            <label class="form-check-label">Show them a map <span></span></label>
+          </div>
+          <!-- choice b -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q1' value='B'>
+            <label class="form-check-label">give them a horse</label>
+          </div>
+        </div>
+
+        <!--question 2 -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">2. If a ninja has 3 apples, then gives one to Ling & one to Heang, how many
+            apples does the ninja have left?</p>
+          <!-- choice a -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q2' value='A'>
+            <label class="form-check-label">1</label>
+          </div>
+          <!-- choice b -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q2' value='B'>
+            <label class="form-check-label">2</label>
+          </div>
+        </div>
+
+        <!--question 3 -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">3. How do you know when you meet a ninja?</p>
+          <!-- choice a -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q3' value='A'>
+            <label class="form-check-label">You can smell their ninja smell</label>
+          </div>
+          <!-- choice b -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q3' value='B'>
+            <label class="form-check-label"> You will recognize the outfit</label>
+          </div>
+        </div>
+
+        <!--question 4 -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">4. What is ninja favorite fruit?</p>
+          <!-- choice a -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q4' value='A'>
+            <label class="form-check-label">Banana</label>
+          </div>
+          <!-- choice b -->
+          <div class="form-check my-2 text-white">
+            <input type="radio" name='q4' value='B'>
+            <label class="form-check-label">Apple</label>
+          </div>
+        </div>
+
+        <!-- button -->
+        <div class="text-center">
+          <input type="submit" class="btn btn-warning btn-block btn-lg">
+        </div>
+
+      </form>
+
+    </div>
+    <!--end of quiz section div-->
+  </div>
+
+
+
+
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

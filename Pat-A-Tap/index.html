@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> PadAtap</title>
+	<script type="text/javascript" src="asset/js/lib/jquery-3.4.0.min.js"></script>
+	<!-- style sheet -->
+	<link rel="stylesheet" type="text/css" href="asset/css/css.css">
+	<!-- include paper js -->
+	<script type="text/javascript" src="asset/paperjs/paper-full.js"></script>
+	<!-- include	howler sound -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
+
+	<!-- papar script code goes inside here -->
+	<script type="text/paperscript" canvas="myCanvas">
+		
+var keyData = {
+	q: {
+		sound: new Howl({
+  		src: ['asset/sounds/bubbles.mp3']
+		}),
+		color: '#1abc9c'
+	},
+	w: {
+		sound: new Howl({
+  		src: ['asset/sounds/clay.mp3']
+		}),
+		color: '#2ecc71'
+	},
+	e: {
+		sound: new Howl({
+  		src: ['asset/sounds/confetti.mp3']
+		}),
+		color: '#3498db'
+	},
+	r: {
+		sound: new Howl({
+  		src: ['asset/sounds/corona.mp3']
+		}),
+		color: '#9b59b6'
+	},
+		t: {
+		sound: new Howl({
+  		src: ['asset/sounds/dotted-spiral.mp3']
+		}),
+		color: '#34495e'
+	},
+	y: {
+		sound: new Howl({
+  		src: ['asset/sounds/flash-1.mp3']
+		}),
+		color: '#16a085'
+	},
+	u: {
+		sound: new Howl({
+  		src: ['asset/sounds/flash-2.mp3']
+		}),
+		color: '#27ae60'
+	},
+	i: {
+		sound: new Howl({
+  		src: ['asset/sounds/flash-3.mp3']
+		}),
+		color: '#2980b9'
+	},
+	o: {
+		sound: new Howl({
+			src: ['asset/sounds/glimmer.mp3']
+		}),
+		color: '#8e44ad'
+	},
+	p: {
+		sound: new Howl({
+  		src: ['asset/sounds/moon.mp3']
+		}),
+		color: '#2c3e50'
+	},
+	a: {
+		sound: new Howl({
+  		src: ['asset/sounds/pinwheel.mp3']
+		}),
+		color: '#f1c40f'
+	},
+	s: {
+		sound: new Howl({
+  		src: ['asset/sounds/piston-1.mp3']
+		}),
+		color: '#e67e22'
+	},
+		d: {
+		sound: new Howl({
+  		src: ['asset/sounds/piston-2.mp3']
+		}),
+		color: '#e74c3c'
+	},
+	f: {
+		sound: new Howl({
+  		src: ['asset/sounds/prism-1.mp3']
+		}),
+		color: '#95a5a6'
+	},
+	g: {
+		sound: new Howl({
+  		src: ['asset/sounds/prism-2.mp3']
+		}),
+		color: '#f39c12'
+	},
+	h: {
+		sound: new Howl({
+  		src: ['asset/sounds/prism-3.mp3']
+		}),
+		color: '#d35400'
+	},
+	j: {
+		sound: new Howl({
+  		src: ['asset/sounds/splits.mp3']
+		}),
+		color: '#1abc9c'
+	},
+	k: {
+		sound: new Howl({
+  		src: ['asset/sounds/squiggle.mp3']
+		}),
+		color: '#2ecc71'
+	},
+	l: {
+		sound: new Howl({
+  		src: ['asset/sounds/strike.mp3']
+		}),
+		color: '#3498db'
+	},
+	z: {
+		sound: new Howl({
+  		src: ['asset/sounds/suspension.mp3']
+		}),
+		color: '#9b59b6'
+	},
+	x: {
+		sound: new Howl({
+  		src: ['asset/sounds/timer.mp3']
+		}),
+		color: '#34495e'
+	},
+	c: {
+		sound: new Howl({
+  		src: ['asset/sounds/ufo.mp3']
+		}),
+		color: '#16a085'
+	},
+	v: {
+		sound: new Howl({
+  		src: ['asset/sounds/veil.mp3']
+		}),
+		color: '#27ae60'
+	},
+	b: {
+		sound: new Howl({
+  		src: ['asset/sounds/wipe.mp3']
+		}),
+		color: '#2980b9'
+	},
+	n: {
+		sound: new Howl({
+			src: ['asset/sounds/zig-zag.mp3']
+		}),
+		color: '#8e44ad'
+	},
+	m: {
+		sound: new Howl({
+  		src: ['asset/sounds/moon.mp3']
+		}),
+		color: '#2c3e50'
+	}
+
+} //end of keyData
+
+		var circles =[];
+
+		function onKeyDown(event) {
+			if (keyData[event.key]){
+				// setting maximum screen point to display
+				var maxPoint = new Point(view.size.width, view.size.height);
+				// generate random point
+				var randomPoint = Point.random();
+				var point = maxPoint * randomPoint;
+				// create the circle with color
+				var newCircle = new Path.Circle(point,500);
+
+				newCircle.fillColor = keyData[event.key].color; 
+				keyData[event.key].sound.play();
+				circles.push(newCircle);
+			}
+		}
+
+		// add animation
+		function onFrame(event){
+			for (var i=0; i<circles.length; i++){
+				circles[i].fillColor.hue += 1;
+				circles[i].scale(.9);
+			}
+		}
+
+	</script> 
+	<!-- end of paper script code -->
+</head>
+<body>
+	<!-- setting canvas (display of the screen) -->
+	<canvas id="myCanvas" resize></canvas>
+
+
+
+<script type="text/javascript" src="asset/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
